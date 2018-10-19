@@ -1,3 +1,4 @@
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 CUDA_VISIBLE_DEVICES=0,1 python ./exps/lk_main.py \
 	--train_lists ${dataset_with_annotation}  \
 	              ${dataset_without_annotation}  \

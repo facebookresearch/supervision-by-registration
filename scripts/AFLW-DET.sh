@@ -1,3 +1,4 @@
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 CUDA_VISIBLE_DEVICES=0,1 python ./exps/basic_main.py \
 	--train_lists ./cache_data/lists/AFLW/train.GTB \
 	--eval_ilists ./cache_data/lists/AFLW/test.GTB \

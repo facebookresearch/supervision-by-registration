@@ -1,3 +1,4 @@
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 CUDA_VISIBLE_DEVICES=0,1 python ./exps/basic_main.py \
 	--train_lists ./cache_data/lists/300W/300w.train.DET \
 	--eval_ilists ./cache_data/lists/300W/300w.test.common.DET \
