@@ -62,7 +62,7 @@ def evaluate_normalized_mean_error(predictions, groundtruth, log, extra_faces):
   accuracy_under_007 = np.sum(error_per_image<0.07) * 100. / error_per_image.size
   accuracy_under_008 = np.sum(error_per_image<0.08) * 100. / error_per_image.size
 
-  print_log('Compute NME and AUC for {:} images with {:} points :: [(nms): mean={:.3f}, std={:.3f}], auc@0.07={:.3f}, auc@0.08-{:.3f}, acc@0.07={:.3f}, acc@0.08={:.3f}'.format(num_images, num_points, normalise_mean_error*100, error_per_image.std()*100, area_under_curve07*100, area_under_curve08*100, accuracy_under_007, accuracy_under_008), log)
+  print_log('Compute NME and AUC for {:} images with {:} points :: [(NME): mean={:.3f}, std={:.3f}], auc@0.07={:.3f}, auc@0.08-{:.3f}, acc@0.07={:.3f}, acc@0.08={:.3f}'.format(num_images, num_points, normalise_mean_error*100, error_per_image.std()*100, area_under_curve07*100, area_under_curve08*100, accuracy_under_007, accuracy_under_008), log)
 
   for_pck_curve = []
   for x in range(0, 3501, 1):

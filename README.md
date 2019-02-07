@@ -51,7 +51,7 @@ python ./exps/basic_main.py [<required arguments>]
 The argument list is loaded by `./lib/config_utils/basic_args.py`.
 An examples script can is `./scripts/300W-DET.sh`, and you can simple run to train the base detector on the `300-W` dataset.
 ```
-sh scripts/300W-DET.sh
+bash scripts/300W-DET.sh
 ```
 
 ### Improving the Detector by SBR
@@ -64,7 +64,7 @@ The argument list is loaded by `./lib/config_utils/lk_args.py`.
 #### An example to train SBR on the unlabeled sequences
 The `init_model` parameter is the path to the detector trained in the `Basic Training` section.
 ```
-sh scripts/demo_sbr.sh
+bash scripts/demo_sbr.sh
 ```
 To see visualization results use the commands in `Visualization`.
 
@@ -104,7 +104,7 @@ ffmpeg -start_number 3 -i cache_data/cache/demo-sbr-vis/image%04d.png -b:v 30000
 supervision-by-registration is released under the [CC-BY-NC license](https://github.com/facebookresearch/supervision-by-registration/blob/master/LICENSE).
 
 
-## Useful information
+## Useful Information
 
 ### 1. train on your own video data
 You should look at the `./lib/datasets/VideoDataset.py` and `./lib/datasets/parse_utils.py`, and add how to find the neighbour frames when giving one image path.

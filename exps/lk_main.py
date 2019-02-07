@@ -169,6 +169,7 @@ def main(args):
           'args' : deepcopy(args),
           'arch' : model_config.arch,
           'state_dict': net.state_dict(),
+          'detector'  : detector.state_dict(),
           'scheduler' : scheduler.state_dict(),
           'optimizer' : optimizer.state_dict(),
           }, logger.path('model') / '{:}-{:}.pth'.format(model_config.arch, epoch_str), logger)

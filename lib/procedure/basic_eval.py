@@ -23,8 +23,8 @@ def basic_eval_all(args, loaders, net, criterion, epoch_str, logger, opt_config)
     nme, _, _ = eval_meta.compute_mse(logger)
     meta_path = logger.path('meta') / 'eval-{:}-{:02d}-{:02d}.pth'.format(epoch_str, i, len(loaders))
     eval_meta.save(meta_path)
-    nmes.append(nme)
-  return ', '.join(['{:.1f}'.format(x) for x in nmes])
+    nmes.append(nme*100)
+  return ', '.join(['{:.2f}'.format(x) for x in nmes])
   
 
 def basic_eval(args, loader, net, criterion, epoch_str, logger, opt_config):

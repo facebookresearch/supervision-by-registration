@@ -159,6 +159,7 @@ def main(args):
           'args' : deepcopy(args),
           'arch' : model_config.arch,
           'state_dict': net.state_dict(),
+          'detector'  : net.state_dict(),
           'scheduler' : scheduler.state_dict(),
           'optimizer' : optimizer.state_dict(),
           }, logger.path('model') / '{:}-{:}.pth'.format(model_config.arch, epoch_str), logger)
@@ -169,6 +170,7 @@ def main(args):
           }, logger.last_info(), logger)
 
     eval_results = eval_all(args, eval_loaders, net, criterion, epoch_str, logger, opt_config)
+    logger.log('NME Results : {:}'.format( eval_results ))
     
     # measure elapsed time
     epoch_time.update(time.time() - start_time)
